@@ -223,6 +223,8 @@ class Dog:
 #        print('I am swimming')
 #Amy = Dog()
 #Amy.swim()
+
+    gender = 'female'
     def __init__(self, x):
         self.power = x
     def check_power(self):
@@ -230,11 +232,14 @@ class Dog:
 
 amy = Dog(15)
 lex = Dog(1)
+print(amy.gender)
 lex.check_power()
 amy.check_power()
 print('\n' * 3)
 
+##########################################################
 
+print('\n' * 3)
 
 
 
