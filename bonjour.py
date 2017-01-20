@@ -238,6 +238,57 @@ amy.check_power()
 print('\n' * 3)
 
 ##########################################################
+class Parent():
+    def print_last_name(self):
+        print('KingKong')
+
+class Child(Parent):
+    def print_first_name(self):
+        print('Amy')
+    # overriding
+    def print_last_name(self):
+        print('Monkey')
+
+amy = Child()
+amy.print_first_name()
+amy.print_last_name()
+print('\n')
+
+class Amy():
+    def print_last_name(self):
+        print('Monkey')
+
+class lex():
+    def print_first_name(self):
+        print('lex')
+
+class AmyLex(Amy, lex):
+    pass
+
+ax = AmyLex()
+ax.print_first_name()
+ax.print_last_name()
+print('\n' * 3)
+
+##########################################################
+import threading
+
+class Messenger(threading.Thread):
+    def run(self):
+        for _ in range(10):
+            print(threading.current_thread().getName())
+
+x = Messenger(name = "메세지를 보냅니다")
+y = Messenger(name = "메세지를 수신합니다")
+
+# x.run()
+x.start()
+y.start()
+
+print('\n' * 3)
+
+##########################################################
+
 
 print('\n' * 3)
 
@@ -258,11 +309,3 @@ print('\n' * 3)
 
 
 
-
-
-
-
-
-
-
-print('\n' * 3)
